@@ -75,8 +75,8 @@
     padding:10vmin;
     position:absolute;
     text-align:center;
-    top:50%;
-    transform:translate(-500px, -300px);
+    top:60%;
+    transform:translate(-500px, -400px);
   }
 
 
@@ -174,13 +174,214 @@ li:before {
   width: 100%;
 }
 
-.hrline {
+/* .hrline {
   width: 90%;
   background-color: #433b52;
   height: 1mm;
+} */
+
+/* 
+.freespace{
+  height: 90%;
+} */
+
+
+svg{
+  margin: -220px auto;
+}
+
+.container {
+  display: block;
+  /* width: 100%; */
+  /* max-width: 600px; */
 }
 
 
-.freespace{
-  height: 50%;
+.rangeSlider {
+  position: relative;
+  /* height: 6px; */
+  margin: 40px;
+  /* margin-top: 45px;
+  margin-bottom: 12px; */
+  border-radius: 500px;
+  background-color: #ddd;
+}
+.rangeSlider--animate .rangeSlider__handle,
+.rangeSlider--animate .rangeSlider__tooltip {
+  transition: left 300ms;
+}
+.rangeSlider--animate .rangeSlider__range {
+  transition: left 300ms, width 300ms;
+}
+.rangeSlider__handle {
+  display: inline-block;
+  position: absolute;
+  top: -12px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: #999;
+}
+.rangeSlider__handle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 8px);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #333;
+}
+.rangeSlider__handle:after {
+  content: attr(data-value);
+  display: block;
+  position: absolute;
+  top: -33px;
+  left: -25px;
+  width: 80px;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  transition: margin 300ms;
+}
+.rangeSlider__handle:focus {
+  outline: 0;
+}
+.rangeSlider__handle--from {
+  left: -15px;
+}
+.rangeSlider__handle--to {
+  right: -15px;
+}
+.rangeSlider__handle--active {
+  z-index: 1;
+}
+.rangeSlider__range {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #428bca;
+  border-radius: 500px;
+}
+.rangeSlider__tooltips {
+  position: absolute;
+  top: -45px;
+  width: 100%;
+  height: 25px;
+  filter: url("#composite-goo");
+}
+.rangeSlider__tooltip {
+  position: absolute;
+  width: 80px;
+  height: 25px;
+  background-color: #333;
+}
+.rangeSlider__tooltip--from {
+  left: -40px;
+}
+.rangeSlider__tooltip--to {
+  right: -40px;
+}
+
+
+
+* {
+  font-family: 'Helvetica';
+}
+.im-buttons, h5 {
+  display: inline-block;
+}
+.im-buttons label, h5 label {
+  display: inline-block;
+  /* font-size: 16px;
+  font-weight: 600;
+  line-height: 1.65; */
+}
+.im-buttons label span, h5 label span {
+  display: inline-block;
+}
+.radio {
+  margin: 16px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+.radio input {
+  display: none;
+}
+.radio input#a-button + span:after {
+  border: #0f0 2px solid;
+}
+.radio input#b-button + span:after {
+  border: #f00 2px solid;
+}
+.radio input + span {
+  line-height: 22px;
+  height: 22px;
+  padding-left: 22px;
+  position: relative;
+}
+.radio input + span:not(:empty) {
+  padding-left: 30px;
+  margin-left: 20px;
+}
+.radio input + span:before, .radio input + span:after {
+  content: '';
+  width: 22px;
+  height: 22px;
+  display: block;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.radio input + span:before {
+  transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+.radio input + span#a-button:before {
+  background: #0f0;
+}
+.radio input + span#b-button:before {
+  background: #f00;
+}
+.radio input + span:after {
+  background: rgb(207, 203, 203);
+  transform: scale(0.78);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+}
+.radio input:checked + span:before {
+  transform: scale(1.04);
+}
+.radio input:checked + span:after {
+  transform: scale(0.4);
+  transition: transform 0.3s ease;
+}
+.radio input#a-button:checked + span:before {
+  background: rgb(97, 184, 57);
+  border: 2px solid #285335;
+}
+.radio input#a-button:checked + span:after {
+  background: #6eb37a;
+}
+.radio input#b-button:checked + span:before {
+  background: rgb(196, 57, 57);
+  border: 2px solid rgb(104, 51, 20);
+}
+.radio input#b-button:checked + span:after {
+  background: rgb(190, 90, 90);
+}
+.radio:hover input + span:before {
+  transform: scale(0.92);
+}
+.radio:hover input + span:after {
+  transform: scale(0.74);
+}
+.radio:hover input:checked + span:after {
+  transform: scale(0.4);
 }

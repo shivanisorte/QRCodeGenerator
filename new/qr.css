@@ -1,8 +1,8 @@
-body {
+.bodyclass {
     font-family: "Century Gothic", "Lato", sans-serif;
   }
   
-  a {
+  .aclass {
     text-decoration: none;
   }
   
@@ -88,4 +88,195 @@ body {
   }
 
 
-  
+
+
+
+/* 
+  added */
+
+  /* html {
+	height: 100%;
+	width: 1000px;
+	background-color: hsla(200,40%,30%,.4);
+	background-image:		
+		url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
+		url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+		url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+	background-repeat: repeat-x;
+	background-position: 
+		0 20%,
+		0 100%,
+		0 50%,
+		0 100%,
+		0 0;
+	background-size: 
+		2500px,
+		800px,
+		500px 200px,
+		1000px,
+		400px 260px;
+	animation: 50s para infinite linear;
+	}
+
+@keyframes para {
+	100% {
+		background-position: 
+			-5000px 20%,
+			-800px 95%,
+			500px 50%,
+			1000px 100%,
+			400px 0;
+		}
+	} */
+
+    html {
+        /* height:100%; */
+        /* overflow: scroll; */
+      }
+      
+      body {
+        margin:0;
+         width: 100%;
+      }
+      
+      .bg {
+        animation:slide 3s ease-in-out infinite alternate;
+        background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+        bottom:0;
+        left:-50%;
+        opacity:.5;
+        position:fixed;
+        right:-50%;
+        top:0;
+        z-index:-1;
+      }
+      
+      .bg2 {
+        animation-direction:alternate-reverse;
+        animation-duration:4s;
+      }
+      
+      .bg3 {
+        animation-duration:5s;
+      }
+      
+      .content {
+        background-color:rgba(255,255,255,.8);
+        border-radius:.25em;
+        box-shadow:0 0 .25em rgba(0,0,0,.25);
+        box-sizing:border-box;
+        left:50%;
+        padding:10vmin;
+        position:absolute;
+        text-align:center;
+        top:50%;
+        transform:translate(-500px, -300px);
+      }
+    
+    
+      @media only screen and (max-width: 768px){
+    
+        .content {
+          background-color:rgba(255,255,255,.8);
+          border-radius:.25em;
+          box-shadow:0 0 .25em rgba(0,0,0,.25);
+          box-sizing:border-box;
+          left:50%;
+          padding:10vmin;
+          position:absolute;
+          text-align:center;
+          transform:translate(-200px, -250px);
+        }
+    
+    
+      }
+      
+      h1 {
+        font-family:monospace;
+      }
+      
+      @keyframes slide {
+        0% {
+          transform:translateX(-25%);
+        }
+        100% {
+          transform:translateX(25%);
+        }
+      }
+    
+    body {
+      
+    }
+    .topBar {
+      background: #352b2b;
+      color: #d6d5a3;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .smallinput {
+      max-width: 270px;
+      margin-left: 30px;
+    }
+    
+    .mainContent {
+      padding: 5%;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    
+    .A4Page {
+      /* display: flex;
+      width: 210mm;
+      background-color: white;
+      height: 200mm;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; */
+    }
+    
+    li {
+      display: block;
+    }
+    
+    li:before {
+      content: "🌑";
+      font-family: "Glyphicons Halflings";
+      font-size: 9px;
+      float: left;
+      margin-top: 7px;
+      margin-left: -3px;
+      margin-right: 11px;
+    }
+    
+    .qrBoxOuter {
+      padding: 4mm;
+      background: white;
+      border: 1px solid black;
+      margin-top: 2mm;
+      margin-bottom: 2mm;
+    }
+    
+    #box1 {
+      width: 76mm;
+      height: 76mm;
+    }
+    .upiLogo {
+      width: 56%;
+    }
+    #box1 img {
+      width: 100%;
+    }
+    
+    .hrline {
+      width: 90%;
+      background-color: #433b52;
+      height: 1mm;
+    }
+    
+    
+    .freespace{
+      height: 50%;
+    }

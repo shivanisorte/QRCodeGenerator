@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Plant Details</title>
+    <title>Planet-Save our Earth!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -18,16 +18,7 @@
 
 <body>
     <div id="fb-root"></div>
-    <script>
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/mr_IN/sdk.js#xfbml=1&version=v3.0';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
+    
 
     <div class="bg"></div>
     <div class="bg bg2"></div>
@@ -40,12 +31,12 @@
           <h5 class="card-title">Plant Information</h5>
   
           <div class="form-group mb-3">
-            <label for="plantName">Plant Name</label>
-            <input type="text" class="smallinput form-control" id="plantName" placeholder="">
+            <label for="nameOfPlant">Plant Name</label>
+            <input type="text" class="smallinput form-control" id="nameOfPlant" placeholder="">
           </div>
           <div class="form-group mb-3">
-            <label for="nurseryName">Nursery Name</label>
-            <input type="text" class="smallinput form-control" id="nurseryName" placeholder="">
+            <label for="nameOfNursery">Nursery Name</label>
+            <input type="text" class="smallinput form-control" id="nameOfNursery" placeholder="">
           </div>
           <div class="form-group mb-3">
             <label for="plantType">Plant Type</label>
@@ -53,15 +44,84 @@
           </div>
           <div class="form-group mb-3">
             <label for="plantPrice">Plant Price</label>
-            <input type="text" class="smallinput form-control" id="plantPrice" placeholder="">
+            <input type ="number" class="smallinput form-control" id="plantPrice" placeholder="">
           </div>
           <div class="form-group mb-3">
             <label for="temp">Temperature</label>
-            <input type="text" class="smallinput form-control" id="temp" placeholder="">
+            
+
+
+  <div class="container">
+  <div class="rangeSlider">
+    <div class="rangeSlider__range"></div>
+    <div class="rangeSlider__tooltips">
+      <div class="rangeSlider__tooltip rangeSlider__tooltip--from"></div>
+      <div class="rangeSlider__tooltip rangeSlider__tooltip--to"></div>
+    </div>
+    <button type="button" class="rangeSlider__handle rangeSlider__handle--from" data-handle-type="from"></a>
+    <button type="button" class="rangeSlider__handle rangeSlider__handle--to" data-handle-type="to"></a>
+  </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="composite-goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+    </filter>
+  </defs>
+</svg>
+
+
+
           </div>
           <div class="form-group mb-3">
-            <label for="requirements">Requirements</label>
-            <input type="text" class="smallinput form-control" id="requirements" placeholder="">
+    
+    <label for="requirements">Requirements</label> <br>
+
+
+
+
+    <table>
+  
+  <tbody>
+    <tr>
+      <td>Water</td>
+      <td><span class="im-buttons">
+  <label class="radio" id="a-button">
+    <input name="im-buttons" type="radio" id="a-button" checked="checked"/><span>yes</span>
+  </label>
+  <label class="radio" id="b-button">
+    <input name="im-buttons" type="radio" id="b-button"/><span>no</span>
+  </label></span></td>
+    </tr>
+    <tr>
+      <td scope="row" >Sunlight</td>
+      <td><span class="im-buttons">
+  <label class="radio" id="a-button">
+    <input name="im-buttons" type="radio" id="a-button" checked="checked"/><span>yes</span>
+  </label>
+  <label class="radio" id="b-button">
+    <input name="im-buttons" type="radio" id="b-button"/><span>no</span>
+  </label></span></td>
+    </tr>
+    <tr>
+      <td scope="row" >Chemicals</td>
+      <td><span class="im-buttons">
+  <label class="radio" id="a-button">
+    <input name="im-buttons" type="radio" id="a-button" checked="checked"/><span>yes</span>
+  </label>
+  <label class="radio" id="b-button">
+    <input name="im-buttons" type="radio" id="b-button"/><span>no</span>
+  </label></span></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+      
           </div>
           <div class="form-group mb-3">
             <label for="care">Care</label>
