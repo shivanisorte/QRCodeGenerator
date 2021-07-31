@@ -2,7 +2,7 @@ $("#generateButton").click(function () {
     genQrCode();
   });
 
-
+  var min = 1 ,max =100;
   
   //var l = {}; location.search.slice(1).split("&").map(function(v){var x = v.split("="); l[x[0]] = x[1]; });
   function genQrCode() {
@@ -22,7 +22,8 @@ $("#generateButton").click(function () {
     // var issun = false;
     // var ischem = true;
 
-    var temp = document.getElementById("myRange");
+    var temp = document.getElementById("myRange").value;
+    // rectemp=temp.value;
 
     var care = document.getElementById("care");
     var strUser = care.options[care.selectedIndex].text;
@@ -30,8 +31,9 @@ $("#generateButton").click(function () {
     // var care = $("#care").val();
 
   
+    console.log(temp);
     //TODO - Show Error on empty Box.
-    console.log(plantName, nurseryName, plantType,plantPrice,iswater,issun, ischem,strUser);
+     console.log(plantName, nurseryName, plantType,plantPrice,min,max,iswater,issun, ischem,strUser);
     var str =
       "{ nameOfPlant : " +
       plantName +
@@ -42,9 +44,9 @@ $("#generateButton").click(function () {
       ", price : "+
       plantPrice +
       ", mintemp : " +
-      '12' +
+      min +
       ", maxtemp : " +
-      '43' +
+      max +
       ", isWaterNeeded : "+
       iswater+
       ", isSunNeeded : "+
@@ -1691,6 +1693,8 @@ $("#generateButton").click(function () {
       $rangeSliderRange.css('width', (HANDLE_POSITION['to'] - HANDLE_POSITION['from']) + '%');
     }
     
+    
+
     function dragging(e) {
       var $handle = e.data.$handle,
           handleType = $handle.attr('data-handle-type'),
@@ -1702,6 +1706,14 @@ $("#generateButton").click(function () {
       position = Math.min(position, 100);
       position = Math[handleType === 'from' ? 'min' : 'max'](position, HANDLE_POSITION[handleType === 'from' ? 'to' : 'from']);
       
+
+      min =  Math.round(Math.min(position, 100));
+      max =  Math.round(Math.max(position, 0));
+      // console.log(min,max);
+      // console.log(typeof(min));
+
+
+
       HANDLE_POSITION[handleType] = position;
       
       render();
