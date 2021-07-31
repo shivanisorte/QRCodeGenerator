@@ -315,10 +315,10 @@ svg{
 .radio input {
   display: none;
 }
-.radio input#a-button + span:after {
+.radio input#a-button1 + span:after, #a-button2 + span:after, #a-button3 + span:after {
   border: rgb(42, 63, 42) 2px solid;
 }
-.radio input#b-button + span:after {
+.radio input#b-button1 + span:after, #b-button2 + span:after, #b-button3 + span:after {
   border: rgb(192, 23, 23) 2px solid;
 }
 .radio input + span {
@@ -344,10 +344,10 @@ svg{
 .radio input + span:before {
   transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
 }
-.radio input + span#a-button:before {
+.radio input + span#a-button1:before, .radio input + span#a-button2:before, .radio input + span#a-button3:before {
   background: rgb(38, 161, 38);
 }
-.radio input + span#b-button:before {
+.radio input + span#b-button1:before, .radio input + span#b-button2:before, .radio input + span#b-button3:before {
   background: rgb(150, 40, 40);
 }
 .radio input + span:after {
@@ -362,18 +362,18 @@ svg{
   transform: scale(0.4);
   transition: transform 0.3s ease;
 }
-.radio input#a-button:checked + span:before {
+.radio input#a-button1:checked + span:before, #a-button2:checked + span:before, #a-button3:checked + span:before {
   background: rgb(157, 187, 143);
   border: 2px solid #285335;
 }
-.radio input#a-button:checked + span:after {
+.radio input#a-button1:checked + span:after, #a-button2:checked + span:after, #a-button3:checked + span:after {
   background: #6eb37a;
 }
-.radio input#b-button:checked + span:before {
+.radio input#b-button1:checked + span:before, #b-button2:checked + span:before, #b-button3:checked + span:before {
   background: rgb(201, 145, 145);
   border: 2px solid rgb(104, 51, 20);
 }
-.radio input#b-button:checked + span:after {
+.radio input#b-button1:checked + span:after, #b-button2:checked + span:after, #b-button3:checked + span:after {
   background: rgb(201, 133, 133);
 }
 .radio:hover input + span:before {

@@ -90,30 +90,30 @@
       <td>Water</td>
       <td><span class="im-buttons">
   <label class="radio" id="a-button">
-    <input name="im-buttons1" type="radio" id="a-button" checked="checked"/><span>yes</span>
+    <input name="im-buttons1" type="radio" id="a-button1" checked="checked"/><span>yes</span>
   </label>
   <label class="radio" id="b-button">
-    <input name="im-buttons1" type="radio" id="b-button"/><span>no</span>
+    <input name="im-buttons1" type="radio" id="b-button1"/><span>no</span>
   </label></span></td>
     </tr>
     <tr>
       <td scope="row" >Sunlight</td>
       <td><span class="im-buttons">
   <label class="radio" id="a-button">
-    <input name="im-buttons2" type="radio" id="a-button" checked="checked"/><span>yes</span>
+    <input name="im-buttons2" type="radio" id="a-button2" checked="checked"/><span>yes</span>
   </label>
   <label class="radio" id="b-button">
-    <input name="im-buttons2" type="radio" id="b-button"/><span>no</span>
+    <input name="im-buttons2" type="radio" id="b-button2"/><span>no</span>
   </label></span></td>
     </tr>
     <tr>
       <td scope="row" >Chemicals</td>
       <td><span class="im-buttons">
   <label class="radio" id="a-button">
-    <input name="im-buttons3" type="radio" id="a-button" checked="checked"/><span>yes</span>
+    <input name="im-buttons3" type="radio" id="a-button3" checked="checked"/><span>yes</span>
   </label>
   <label class="radio" id="b-button">
-    <input name="im-buttons3" type="radio" id="b-button"/><span>no</span>
+    <input name="im-buttons3" type="radio" id="b-button3"/><span>no</span>
   </label></span></td>
     </tr>
    
@@ -124,8 +124,22 @@
       
           </div>
           <div class="form-group mb-3">
-            <label for="care">Care</label>
-            <input type="text" class="smallinput form-control" id="care" placeholder="">
+            <label for="care">Care</label>&nbsp; &nbsp; &nbsp;
+            
+
+
+            <select name="care" id="care"> 
+            <option value="vlow">Very Low</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            <option value="vhigh">Very High</option>
+            </select>
+
+
+
+
+
           </div>
           <br>
           <button type="button" id="generateButton" class="btn btn-block btn-primary btn-lg">Generate QR Code</button>

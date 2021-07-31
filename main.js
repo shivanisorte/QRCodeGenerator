@@ -1,6 +1,8 @@
 $("#generateButton").click(function () {
     genQrCode();
   });
+
+
   
   //var l = {}; location.search.slice(1).split("&").map(function(v){var x = v.split("="); l[x[0]] = x[1]; });
   function genQrCode() {
@@ -8,16 +10,27 @@ $("#generateButton").click(function () {
     var nurseryName = $("#nameOfNursery").val();
     var plantType = $("#plantType").val();
     var plantPrice = $("#plantPrice").val();
-    var mintemp = $("#mintemp").val();
-    var maxtemp = $('#maxtemp').val();
-    var iswater = $("#iswater").val();
-    var issun = $("#issun").val();
-    var ischem = $("ischem").val();
-    var care = $("#care").val();
+    var temp =2;
+    // var mintemp = $("#mintemp").val();
+    // var maxtemp = $('#maxtemp').val();
+
+    var iswater = document.getElementById("a-button1").checked;
+    var issun = document.getElementById("a-button2").checked;
+    var ischem = document.getElementById("a-button3").checked;
+
+    // var iswater = true;
+    // var issun = false;
+    // var ischem = true;
+
+    var temp = document.getElementById("myRange");
+    
+    var care = document.getElementById("care");
+
+    // var care = $("#care").val();
 
   
     //TODO - Show Error on empty Box.
-    console.log(plantName, nurseryName, plantType,plantPrice,temp,requirements,care);
+    console.log(plantName, nurseryName, plantType,plantPrice,iswater,issun, ischem,care);
     var str =
       "{ nameOfPlant : " +
       plantName +
@@ -28,9 +41,9 @@ $("#generateButton").click(function () {
       ", price : "+
       plantPrice +
       ", mintemp : " +
-      mintemp +
+      '12' +
       ", maxtemp : " +
-      maxtemp +
+      '43' +
       ", isWaterNeeded : "+
       iswater+
       ", isSunNeeded : "+
@@ -38,14 +51,37 @@ $("#generateButton").click(function () {
       ", isChemicalNeeded : "+
       ischem+
       ", care : "+
-      care+" }";
+      "care"+" }";
+
+
+      // var str =
+      // "{ nameOfPlant : " +
+      // plantName +
+      // ", nameOfNursery : " +
+      // nurseryName +
+      // ", typeOfPlant : " +
+      // plantType +
+      // ", price : "+
+      // plantPrice +
+      // ", mintemp : " +
+      // mintemp +
+      // ", maxtemp : " +
+      // maxtemp +
+      // ", isWaterNeeded : "+
+      // iswater+
+      // ", isSunNeeded : "+
+      // issun +
+      // ", isChemicalNeeded : "+
+      // ischem+
+      // ", care : "+
+      // care+" }";
 
     $("#plantNameReplace").text(plantName);
     $("#nurseryNameReplace").text(nurseryName);
     $("#plantTypeReplace").text(plantType);
     $("#plantPriceReplace").text(plantPrice);
     $("#tempReplace").text(temp);
-    $("#requirementsReplace").text(requirements);
+    // $("#requirementsReplace").text(requirements);
     $("#careReplace").text(care);
     $("#box1").html("");
 
