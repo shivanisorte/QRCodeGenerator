@@ -30,21 +30,21 @@
         <div class="card-body">
           <h5 class="card-title">Plant Information</h5>
   
-          <div class="form-group mb-3">
+          <div class="form-group mb-3" id="red">
             <label for="nameOfPlant">Plant Name</label>
-            <input type="text" class="smallinput form-control" id="nameOfPlant" placeholder="">
+            <input type="text" class="smallinput form-control" id="nameOfPlant" placeholder="" required>
           </div>
           <div class="form-group mb-3">
             <label for="nameOfNursery">Nursery Name</label>
-            <input type="text" class="smallinput form-control" id="nameOfNursery" placeholder="">
+            <input type="text" class="smallinput form-control" id="nameOfNursery" placeholder="" required>
           </div>
           <div class="form-group mb-3">
             <label for="plantType">Plant Type</label>
-            <input type="text" class="smallinput form-control" id="plantType" placeholder="">
+            <input type="text" class="smallinput form-control" id="plantType" placeholder="" required>
           </div>
           <div class="form-group mb-3">
             <label for="plantPrice">Plant Price</label>
-            <input type ="number" class="smallinput form-control" id="plantPrice" placeholder="">
+            <input type ="number" class="smallinput form-control" id="plantPrice" placeholder="" required>
           </div>
           <div class="form-group mb-3">
             <label for="temp">Temperature</label>
@@ -128,7 +128,8 @@
             
 
 
-            <select name="care" id="care"> 
+            <select name="care" id="care" required> 
+            <option disabled selected value>-- select an option --</option>
             <option value="vlow">Very Low</option>
             <option value="low">Low</option>
             <option value="medium">Medium</option>

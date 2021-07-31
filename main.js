@@ -1,5 +1,66 @@
 $("#generateButton").click(function () {
+
+  var care = document.getElementById("care");
+    var strUser = care.options[care.selectedIndex].text;
+    var plantName = document.getElementById("nameOfPlant").value;
+    //console.log(plantName);
+    if(plantName=="")
+    {
+      document.getElementById('nameOfPlant').style.backgroundColor = "#ea051b24";
+    }
+    var nurseryName = $("#nameOfNursery").val();
+    var plantType = $("#plantType").val();
+    var plantPrice = $("#plantPrice").val();
+
+
+if(plantName=""||nurseryName==""||plantType==""||plantPrice==""||strUser=='-- select an option --')
+{
+  
+
+    if(nurseryName=="")
+    {
+      document.getElementById('nameOfNursery').style.backgroundColor = "#ea051b24";
+    }
+
+    if(plantType=="")
+    {
+      document.getElementById('plantType').style.backgroundColor = "#ea051b24";
+    }
+
+
+    if(plantName=="")
+    {
+      console.log('here');
+      document.getElementById('red').style.backgroundColor = "#ea051b24";
+    }
+
+
+    if(plantPrice=="")
+    {
+      document.getElementById('plantPrice').style.backgroundColor = "#ea051b24";
+      //document.getElementById('plantPrice').value = "Please fill this value";
+    }
+
+    if(strUser=='-- select an option --')
+    {
+      document.getElementById('care').style.backgroundColor = "#ea051b24";
+      //document.getElementById('care').value = "Please fill this value";
+    }
+
+
+
+    var para = document.createElement("P");                     
+    var t = document.createTextNode("Please fill out all the fields.");      
+    para.appendChild(t);                                        
+    document.getElementById("box1").appendChild(para);         
+
+
+
+  }
+  else{
+
     genQrCode();
+  }
   });
 
   var min = 1 ,max =100;
@@ -10,7 +71,7 @@ $("#generateButton").click(function () {
     var nurseryName = $("#nameOfNursery").val();
     var plantType = $("#plantType").val();
     var plantPrice = $("#plantPrice").val();
-    var temp =2;
+    //var temp =2;
     // var mintemp = $("#mintemp").val();
     // var maxtemp = $('#maxtemp').val();
 
@@ -30,8 +91,16 @@ $("#generateButton").click(function () {
 
     // var care = $("#care").val();
 
+    // var check=document.getElementById("#nameOfPlanet").required;
+    // console.log(check);
+
   
-    console.log(temp);
+    
+
+
+
+
+    //console.log(temp);
     //TODO - Show Error on empty Box.
      console.log(plantName, nurseryName, plantType,plantPrice,min,max,iswater,issun, ischem,strUser);
     var str =
@@ -83,7 +152,7 @@ $("#generateButton").click(function () {
     $("#nurseryNameReplace").text(nurseryName);
     $("#plantTypeReplace").text(plantType);
     $("#plantPriceReplace").text(plantPrice);
-    $("#tempReplace").text(temp);
+    //$("#tempReplace").text(temp);
     // $("#requirementsReplace").text(requirements);
     $("#careReplace").text(care);
     $("#box1").html("");
@@ -108,7 +177,7 @@ $("#generateButton").click(function () {
       allowTaint: true,
       onrendered: function (canvas) {
         canvas.toBlob(function (blob) {
-          saveAs(blob, "UPI_QR_Code.png");
+          saveAs(blob, "Plant_QRCode.png");
         });
       }
     });
