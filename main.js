@@ -23,14 +23,15 @@ $("#generateButton").click(function () {
     // var ischem = true;
 
     var temp = document.getElementById("myRange");
-    
+
     var care = document.getElementById("care");
+    var strUser = care.options[care.selectedIndex].text;
 
     // var care = $("#care").val();
 
   
     //TODO - Show Error on empty Box.
-    console.log(plantName, nurseryName, plantType,plantPrice,iswater,issun, ischem,care);
+    console.log(plantName, nurseryName, plantType,plantPrice,iswater,issun, ischem,strUser);
     var str =
       "{ nameOfPlant : " +
       plantName +
@@ -51,7 +52,7 @@ $("#generateButton").click(function () {
       ", isChemicalNeeded : "+
       ischem+
       ", care : "+
-      "care"+" }";
+      strUser+" }";
 
 
       // var str =
