@@ -22,7 +22,7 @@ $("#generateButton").click(function () {
     // var issun = false;
     // var ischem = true;
 
-    var temp = document.getElementById("myRange").value;
+    //var temp = document.getElementById("myRange").value;
     // rectemp=temp.value;
 
     var care = document.getElementById("care");
@@ -44,9 +44,9 @@ $("#generateButton").click(function () {
       ", price : "+
       plantPrice +
       ", mintemp : " +
-      min +
+      min.toString() +
       ", maxtemp : " +
-      max +
+      max.toString() +
       ", isWaterNeeded : "+
       iswater+
       ", isSunNeeded : "+
@@ -1693,7 +1693,7 @@ $("#generateButton").click(function () {
       $rangeSliderRange.css('width', (HANDLE_POSITION['to'] - HANDLE_POSITION['from']) + '%');
     }
     
-    
+ 
 
     function dragging(e) {
       var $handle = e.data.$handle,
@@ -1707,8 +1707,19 @@ $("#generateButton").click(function () {
       position = Math[handleType === 'from' ? 'min' : 'max'](position, HANDLE_POSITION[handleType === 'from' ? 'to' : 'from']);
       
 
-      min =  Math.round(Math.min(position, 100));
-      max =  Math.round(Math.max(position, 0));
+
+      if(handleType=='from'){
+        min =  Math.round(Math.min(position, 100));
+        //console.log(typeof(min));
+      }
+
+      if(handleType=='to'){
+        max =  Math.round(Math.max(position, 0));
+        // console.log("max "+max);
+      }
+
+      //min =  Math.round(Math.min(position, 100));
+      //max =  Math.round(Math.max(position, 0));
       // console.log(min,max);
       // console.log(typeof(min));
 
@@ -1724,6 +1735,16 @@ $("#generateButton").click(function () {
           handleType = $handle.data('handle-type'),
           value = getValue(HANDLE_POSITION[handleType]),
           snapPosition = VALUES.indexOf(value) * STEP_LENGTH;
+          // if(handleType='from'){
+          //   min=snapPosition;
+          // }
+
+          // if(handleType='to'){
+          //   max=snapPosition;
+          // }
+
+          
+          //console.log(snapPosition, handleType);
       
       if(snapPosition !== HANDLE_POSITION[handleType]) {
         $rangeSlider.addClass('rangeSlider--animate');
