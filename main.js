@@ -104,26 +104,26 @@ if(plantName=""||nurseryName==""||plantType==""||plantPrice==""||strUser=='-- se
     //TODO - Show Error on empty Box.
      console.log(plantName, nurseryName, plantType,plantPrice,min,max,iswater,issun, ischem,strUser);
     var str =
-      "{ nameOfPlant : " +
+      `{ "np": "` +
       plantName +
-      ", nameOfNursery : " +
+      `", "nn":"` +
       nurseryName +
-      ", typeOfPlant : " +
+      `", "tp":"` +
       plantType +
-      ", price : "+
+      `", "p":"`+
       plantPrice +
-      ", mintemp : " +
+      `", "mi":"` +
       min.toString() +
-      ", maxtemp : " +
+      `", "ma":"` +
       max.toString() +
-      ", isWaterNeeded : "+
+      `", "isW":`+
       iswater+
-      ", isSunNeeded : "+
+      `, "isS":`+
       issun +
-      ", isChemicalNeeded : "+
+      `, "isC":`+
       ischem+
-      ", care : "+
-      strUser+" }";
+      `, "cr":"`+
+      strUser+`" }`;
 
 
       // var str =
