@@ -172,6 +172,11 @@ if(plantName=""||nurseryName==""||plantType==""||plantPrice==""||strUser=='-- se
   });
   
   function DownloadQrImage() {
+      document.getElementById("DownloadQrImage").style.visibility = "hidden"
+      setTimeout(function(){
+        document.getElementById("DownloadQrImage").style.visibility = "visible"
+      }, 2000)
+
     html2canvas($("#A4Page"), {
       letterRendering: 1,
       allowTaint: true,
