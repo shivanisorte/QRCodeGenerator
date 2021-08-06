@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <style>
+    body {
+        background-color: #eae8dc;
+        letter-spacing: 2.5px;
+        font-size: 9px;
+      }
+      
+      .containerx {
+        background-color: white;
+        width: 850px;
+        height: 400px;
+        border-radius: 10px;
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 130px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      .sign-in {
+        margin: 0px 100px;
+        width: 65%;
+      }
+      
+      h3 {
+        margin-top: 70px;
+        font-family: "Montserrat";
+        letter-spacing: 2.5px;
+        font-size: 9px;
+        color: #9ba0ab;
+      }
+      
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 100;
+        margin: 0px;
+        font-size: 30px;
+      }
+      
+      .description {
+        letter-spacing: 1px;
+        color: #c6c7ce;
+        margin: 15px 0px 35px 0px;
+        line-height: 25px;
+      }
+      
+      .social-media {
+        padding-left: 0px;
+      }
+      
+      .buttonx {
+        margin: 20px 0px;
+        width: 100%;
+        display: block;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 2.5px;
+        color: #5c5f66;
+        font-size: 9px;
+        display: flex;
+        align-items: left;
+        border-radius: 5px;
+        border: 1px solid #ededed;
+      }
+      
+      .button-text {
+        display: flex;
+        margin: 0 auto;
+        line-height: 50px;
+      }
+      
+      .buttonx:hover {
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+      }
+      
+      .icon {
+        margin: 15px;
+      }
+      
+      footer {
+        margin: 0px;
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        border-top: 1px solid #ededed;
+        padding: 30px 100px;
+      }
+      
+      footer > a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #b1cc87;
+        float: right;
+      }
+      
+      footer > a:hover {
+        color: black;
+        font-weight: bold;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+      }
+      
+      .image {
+        background: url("https://images.unsplash.com/reserve/wPCyys8TPCHY3GXm2N2D_ssp_inthewoods_1.jpg?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NTN8MTQyMzA5fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+        background-size: cover;
+        min-width: 35%;
+        max-width: 35%;
+        position: relative;
+        border-radius: 0px 10px 10px 0px;
+      }
+      
+      .image > a {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        margin: 5px;
+      }
+      
+  </style>
+</head>
+<body>
+
+<div id="regi">
+    <div class="containerx">
+
+        <!-- sign-in -->
+        <div class="sign-in">
+          <h3>WELCOME</h3>
+          <h1>Register your plants</h1>
+          <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet ex tristique tincidunt convallis.</p>
+    
+          <!-- social media sign-in options -->
+          <div class="social-media">
+            <button type="button" id= "login" class="sign-up buttonx">
+              <!-- google -->
+              <span class="icon fab fa-google-plus fa-2x"></span>
+              <span class="button-text">Sign up using Google</span>
+            </button>
+            
+          </div>
+          <!-- footer -->
+        </div>
+        <footer>
+          <a href="https://shivanisorte.github.io/">Website created by Shivani Sorte &#8594;</a>
+        </footer>
+        <!-- left image -->
+        <div class="image">
+          <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont,San Francisco, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://www.linkedin.com/in/nerdofdot/" target="_blank" rel="noopener noreferrer" ><span style="display:inline-block;padding:2px 3px">
+           
+              </span><span style="display:inline-block;padding:2px 3px">Project by Amaan Shaikh</span></a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div id="dashboard">
+      <div id="userDetails"></div>
+
+
+      <div id="fb-root"></div>
+    
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+  
+    <div class="content">
+    <h2>Step 1 - Fill up the Plant Details & click on <br> "Generate QR Code"</h1>
+      <div class="card container-fluid" style="max-width: 400px;">
+        <div class="card-body">
+          <h5 class="card-title">Plant Information</h5>
+  
+          <div class="form-group mb-3" id="red">
+            <label for="nameOfPlant">Plant Name</label>
+            <input type="text" class="smallinput form-control" id="nameOfPlant" placeholder="" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="nameOfNursery">Nursery Name</label>
+            <input type="text" class="smallinput form-control" id="nameOfNursery" placeholder="" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="plantType">Plant Type</label>
+            <input type="text" class="smallinput form-control" id="plantType" placeholder="" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="plantPrice">Plant Price</label>
+            <input type ="number" class="smallinput form-control" id="plantPrice" placeholder="" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="temp">Temperature</label>
+            
+
+
+  <div class="container">
+  <div class="rangeSlider">
+    <div class="rangeSlider__range"></div>
+    <div class="rangeSlider__tooltips">
+      <div class="rangeSlider__tooltip rangeSlider__tooltip--from" id="myRange"></div>
+      <div class="rangeSlider__tooltip rangeSlider__tooltip--to"></div>
+    </div>
+    <button type="button" class="rangeSlider__handle rangeSlider__handle--from" data-handle-type="from"></a>
+    <button type="button" class="rangeSlider__handle rangeSlider__handle--to" data-handle-type="to"></a>
+  </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="composite-goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+    </filter>
+  </defs>
+</svg>
+
+
+
+          </div>
+          <div class="form-group mb-3">
+    
+    <label for="requirements">Requirements</label> <br>
+
+
+
+
+    <table>
+  
+  <tbody>
+    <tr>
+      <td>Water</td>
+      <td><span class="im-buttons">
+  <label class="radio" id="a-button">
+    <input name="im-buttons1" type="radio" id="a-button1" checked="checked"/><span>yes</span>
+  </label>
+  <label class="radio" id="b-button">
+    <input name="im-buttons1" type="radio" id="b-button1"/><span>no</span>
+  </label></span></td>
+    </tr>
+    <tr>
+      <td scope="row" >Sunlight</td>
+      <td><span class="im-buttons">
+  <label class="radio" id="a-button">
+    <input name="im-buttons2" type="radio" id="a-button2" checked="checked"/><span>yes</span>
+  </label>
+  <label class="radio" id="b-button">
+    <input name="im-buttons2" type="radio" id="b-button2"/><span>no</span>
+  </label></span></td>
+    </tr>
+    <tr>
+      <td scope="row" >Chemicals</td>
+      <td><span class="im-buttons">
+  <label class="radio" id="a-button">
+    <input name="im-buttons3" type="radio" id="a-button3" checked="checked"/><span>yes</span>
+  </label>
+  <label class="radio" id="b-button">
+    <input name="im-buttons3" type="radio" id="b-button3"/><span>no</span>
+  </label></span></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+      
+          </div>
+          <div class="form-group mb-3">
+            <label for="care">Care</label>&nbsp; &nbsp; &nbsp;
+            
+
+
+            <select name="care" id="care" required> 
+            <option disabled selected value>-- select an option --</option>
+            <option value="vlow">Very Low</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            <option value="vhigh">Very High</option>
+            </select>
+
+
+
+
+
+          </div>
+          <br>
+          <button type="button" id="generateButton" class="btn btn-block btn-primary btn-lg">Generate QR Code</button>
+          <br>
+        </div>
+      </div>
+    <br><br>
+      <h2>Step 2 - Click on "Download QR Image"</h1>
+        
+        <div id="A4Page" class="A4Page">
+          <img class="upiLogo" src="./upi-icon-black.png" alt="">
+          <div class="qrBoxOuter">
+            <div id="box1"></div>
+          </div>
+          <img style="width:85%;margin-top: 4mm;" src="./apps.png" alt="">
+          <button type="button" id="DownloadQrImage" class="shouldBeHiddenOnPrint btn btn-primary btn-lg">Download QR Image</button>
+        </div>
+
+      
+    </div>
+    <div class="freespace">
+      
+      <button id="logout">Logout</button>
+
+    </div>
+
+
+
+
+    </div>
+
+      
+
+
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+     var firebaseConfig = {
+    apiKey: "AIzaSyAkPyoRZOHCzkfybznqwPxoyVedF0oaHoc",
+    authDomain: "planet-2a5fd.firebaseapp.com",
+    projectId: "planet-2a5fd",
+    storageBucket: "planet-2a5fd.appspot.com",
+    messagingSenderId: "473267056262",
+    appId: "1:473267056262:web:2d6410e0d1ca953257ab07",
+    measurementId: "G-S3S9HMJBQC"
+  };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      document.getElementById('dashboard').style.display="none"
+
+      document.getElementById('login').addEventListener('click', GoogleLogin)
+      document.getElementById('logout').addEventListener('click', LogoutUser)
+
+      let provider = new firebase.auth.GoogleAuthProvider()
+
+      function GoogleLogin(){
+        console.log('Login Btn Call')
+        firebase.auth().signInWithPopup(provider).then(res=>{
+          console.log(res.user)
+          document.getElementById('regi').style.display="none"
+          document.getElementById('dashboard').style.display="block"
+          showUserDetails(res.user)
+        }).catch(e=>{
+          console.log(e)
+        })
+      }
+
+      function showUserDetails(user){
+        document.getElementById('userDetails').innerHTML = `
+          <img src="${user.photoURL}" style="width:10%">
+          <p>Name: ${user.displayName}</p>
+          <p>Email: ${user.email}</p>
+        `
+      }
+
+      function checkAuthState(){
+        firebase.auth().onAuthStateChanged(user=>{
+          if(user){
+            document.getElementById('regi').style.display="none"
+            document.getElementById('dashboard').style.display="block"
+            showUserDetails(user)
+          }else{
+
+          }
+        })
+      }
+
+      function LogoutUser(){
+        console.log('Logout Btn Call')
+        firebase.auth().signOut().then(()=>{
+          document.getElementById('regi').style.display="block"
+          document.getElementById('dashboard').style.display="none"
+        }).catch(e=>{
+          console.log(e)
+        })
+      }
+      checkAuthState()
+    </script>
+
+    
+    <script src="main.js"></script>
+</body>
+</html>
