@@ -384,10 +384,11 @@
       document.getElementById('login').addEventListener('click', GoogleLogin)
       document.getElementById('logout').addEventListener('click', LogoutUser)
 
-      var provider = new firebase.auth.GoogleAuthProvider()
+      let provider = new firebase.auth.GoogleAuthProvider()
 
       function GoogleLogin(){
         console.log('Login Btn Call')
+        let provider = new firebase.auth.GoogleAuthProvider()
         firebase.auth().signInWithPopup(provider).then(res=>{
           console.log(res.user)
           document.getElementById('regi').style.display="none"
