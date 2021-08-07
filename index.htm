@@ -192,157 +192,57 @@
 
 
     <div id="dashboard">
-      <div id="userDetails"></div>
-
-
-      <div id="fb-root"></div>
-    
-
-    <div class="bg"></div>
-    <div class="bg bg2"></div>
-    <div class="bg bg3"></div>
-  
-    <div class="content">
-    <h2>Step 1 - Fill up the Plant Details & click on <br> "Generate QR Code"</h1>
-      <div class="card container-fluid" style="max-width: 400px;">
-        <div class="card-body">
-          <h5 class="card-title">Plant Information</h5>
-  
-          <div class="form-group mb-3" id="red">
-            <label for="nameOfPlant">Plant Name</label>
-            <input type="text" class="smallinput form-control" id="nameOfPlant" placeholder="" required>
-          </div>
-          <div class="form-group mb-3">
-            <label for="nameOfNursery">Nursery Name</label>
-            <input type="text" class="smallinput form-control" id="nameOfNursery" placeholder="" required>
-          </div>
-          <div class="form-group mb-3">
-            <label for="plantType">Plant Type</label>
-            <input type="text" class="smallinput form-control" id="plantType" placeholder="" required>
-          </div>
-          <div class="form-group mb-3">
-            <label for="plantPrice">Plant Price</label>
-            <input type ="number" class="smallinput form-control" id="plantPrice" placeholder="" required>
-          </div>
-          <div class="form-group mb-3">
-            <label for="temp">Temperature</label>
-            
-
-
-  <div class="container">
-  <div class="rangeSlider">
-    <div class="rangeSlider__range"></div>
-    <div class="rangeSlider__tooltips">
-      <div class="rangeSlider__tooltip rangeSlider__tooltip--from" id="myRange"></div>
-      <div class="rangeSlider__tooltip rangeSlider__tooltip--to"></div>
-    </div>
-    <button type="button" class="rangeSlider__handle rangeSlider__handle--from" data-handle-type="from"></a>
-    <button type="button" class="rangeSlider__handle rangeSlider__handle--to" data-handle-type="to"></a>
-  </div>
-</div>
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <defs>
-    <filter id="composite-goo">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-    </filter>
-  </defs>
-</svg>
-
-
-
-          </div>
-          <div class="form-group mb-3">
-    
-    <label for="requirements">Requirements</label> <br>
 
 
 
 
-    <table>
-  
-  <tbody>
-    <tr>
-      <td>Water</td>
-      <td><span class="im-buttons">
-  <label class="radio" id="a-button">
-    <input name="im-buttons1" type="radio" id="a-button1" checked="checked"/><span>yes</span>
-  </label>
-  <label class="radio" id="b-button">
-    <input name="im-buttons1" type="radio" id="b-button1"/><span>no</span>
-  </label></span></td>
-    </tr>
-    <tr>
-      <td scope="row" >Sunlight</td>
-      <td><span class="im-buttons">
-  <label class="radio" id="a-button">
-    <input name="im-buttons2" type="radio" id="a-button2" checked="checked"/><span>yes</span>
-  </label>
-  <label class="radio" id="b-button">
-    <input name="im-buttons2" type="radio" id="b-button2"/><span>no</span>
-  </label></span></td>
-    </tr>
-    <tr>
-      <td scope="row" >Chemicals</td>
-      <td><span class="im-buttons">
-  <label class="radio" id="a-button">
-    <input name="im-buttons3" type="radio" id="a-button3" checked="checked"/><span>yes</span>
-  </label>
-  <label class="radio" id="b-button">
-    <input name="im-buttons3" type="radio" id="b-button3"/><span>no</span>
-  </label></span></td>
-    </tr>
-   
-  </tbody>
-</table>
+
+
 
 
       
-          </div>
-          <div class="form-group mb-3">
-            <label for="care">Care</label>&nbsp; &nbsp; &nbsp;
-            
-
-
-            <select name="care" id="care" required> 
-            <option disabled selected value>-- select an option --</option>
-            <option value="vlow">Very Low</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-            <option value="vhigh">Very High</option>
-            </select>
+      <!-- <div id="userDetails"></div> -->
 
 
 
 
-
-          </div>
-          <br>
-          <button type="button" id="generateButton" class="btn btn-block btn-primary btn-lg">Generate QR Code</button>
-          <br>
-        </div>
-      </div>
-    <br><br>
-      <h2>Step 2 - Click on "Download QR Image"</h1>
+      <header id="header">
+        <a href="#" class="logo" style="font-family: 'Poppins', sans-serif;">Planet</a>
+        <ul>
+          <li><a href="https://www.linkedin.com/company/dot-developing-team/?originalSubdomain=in" target="blank" style="font-family: 'Poppins', sans-serif;">Contact</a></li>
+          <li id="logout"><a  style="font-family: 'Poppins', sans-serif;">Logout</a></li>
+        </ul>
+      </header>
+      
+      <section>
+        <h2 id="text"><span style="font-family: 'Poppins', sans-serif;">It's the time to</span><br>Save the Earth</h2>
         
-        <div id="A4Page" class="A4Page">
-          <img class="upiLogo" src="./upi-icon-black.png" alt="">
-          <div class="qrBoxOuter">
-            <div id="box1"></div>
-          </div>
-          <img style="width:85%;margin-top: 4mm;" src="./apps.png" alt="">
-          <button type="button" id="DownloadQrImage" class="shouldBeHiddenOnPrint btn btn-primary btn-lg">Download QR Image</button>
-        </div>
+        <img src="https://drive.google.com/uc?id=1OheESDN1QodxRPvLvRaRRxWcKbn8RW5d" alt="bird1" id="bird1">
+        
+        <img src="https://drive.google.com/uc?id=1dVB79qyy_ED0uVxzINWL3AtCpMShNmk5" alt="bird2" id="bird2">
+        
+        <img src="https://drive.google.com/uc?id=1h_RvHqxijkZRpaJlL80aXzholwUbDF18" alt="forest" id="forest">
+        
+        <a href="index1.html" id="btn" style="font-family: 'Poppins', sans-serif;">Generate QR Code</a>
 
-      
-    </div>
-    <div class="freespace">
-      
 
-    </div>
+        <img src="https://drive.google.com/uc?id=1C4qCUaDw4MnuDV6ofE4pJHzxN-vUpbDw" alt="rocks" id="rocks">
+        
+        <img src="https://drive.google.com/uc?id=1BlnS76cnYYA-rvQBaTAaAngxsxSK7iC1" alt="water" id="water">
+        
+      </section>
+      <div class="sec">
+        <h2>Generate QR Codes</h2>
+        <p><br><br>Protecting our planet starts with you.
+      <br><br>
+     Fight the evils of the environment with the digital power that you possess.
+      <br><br>
+      Click on the 'Generate QR Code button' to generate QR codes for every plant in your nursery.
+      <br><br>
+      Let nature and humanity thrive.
+      
+    </p>
+      </div>
 
 
 
@@ -375,8 +275,11 @@
     appId: "1:473267056262:web:2d6410e0d1ca953257ab07",
     measurementId: "G-S3S9HMJBQC"
   };
+
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
+
+      checkAuthState();
 
       document.getElementById('dashboard').style.display="none"
 
@@ -384,6 +287,7 @@
       document.getElementById('logout').addEventListener('click', LogoutUser)
 
       //let provider = new firebase.auth.GoogleAuthProvider()
+      var signedin;
 
       function GoogleLogin(){
         console.log('Login Btn Call')
@@ -393,11 +297,17 @@
           document.getElementById('regi').style.display="none"
           document.getElementById('dashboard').style.display="block"
           showUserDetails(res.user)
+          signedin=true;
         }).catch(e=>{
           console.log(e)
+          signedin=false;
         })
       }
 
+      if (signedin == true){
+        document.getElementById('regi').style.display="none"
+          document.getElementById('dashboard').style.display="block"
+      }
       function showUserDetails(user){
         /*document.getElementById('userDetails').innerHTML = `
           <img src="${user.photoURL}" style="width:10%">
@@ -413,7 +323,7 @@
             document.getElementById('dashboard').style.display="block"
             showUserDetails(user)
           }else{
-
+            
           }
         })
       }
@@ -430,6 +340,7 @@
       checkAuthState()
     </script>
 
+  
     
     <script src="main.js"></script>
 </body>

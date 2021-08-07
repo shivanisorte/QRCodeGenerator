@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Planet-Save our Earth!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+
+<body>
+    <div id="fb-root"></div>
+    
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+  
+    <div class="content">
+    <h2>Step 1 - Fill up the Plant Details & click on <br> "Generate QR Code"</h1>
+      <div class="card container-fluid" style="max-width: 400px;">
+        <div class="card-body">
+          <h5 class="card-title">Plant Information</h5>
+  
+          <div class="form-group mb-3" id="red">
+            <label for="nameOfPlant">Plant Name</label>
+            <input type="text" class="smallinput form-control" id="nameOfPlant" placeholder="" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="nameOfNursery">Nursery Name</label>
+            <input type="text" class="smallinput form-control" id="nameOfNursery" placeholder="" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="plantType">Plant Type</label>
+            <input type="text" class="smallinput form-control" id="plantType" placeholder="" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="plantPrice">Plant Price</label>
+            <input type ="number" class="smallinput form-control" id="plantPrice" placeholder="" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="temp">Temperature</label>
+            
+
+
+  <div class="container">
+  <div class="rangeSlider">
+    <div class="rangeSlider__range"></div>
+    <div class="rangeSlider__tooltips">
+      <div class="rangeSlider__tooltip rangeSlider__tooltip--from" id="myRange"></div>
+      <div class="rangeSlider__tooltip rangeSlider__tooltip--to"></div>
+    </div>
+    <button type="button" class="rangeSlider__handle rangeSlider__handle--from" data-handle-type="from"></a>
+    <button type="button" class="rangeSlider__handle rangeSlider__handle--to" data-handle-type="to"></a>
+  </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="composite-goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+    </filter>
+  </defs>
+</svg>
+
+
+
+          </div>
+          <div class="form-group mb-3">
+    
+    <label for="requirements">Requirements</label> <br>
+
+
+
+
+    <table>
+  
+  <tbody>
+    <tr>
+      <td>Water</td>
+      <td><span class="im-buttons">
+  <label class="radio" id="a-button">
+    <input name="im-buttons1" type="radio" id="a-button1" checked="checked"/><span>yes</span>
+  </label>
+  <label class="radio" id="b-button">
+    <input name="im-buttons1" type="radio" id="b-button1"/><span>no</span>
+  </label></span></td>
+    </tr>
+    <tr>
+      <td scope="row" >Sunlight</td>
+      <td><span class="im-buttons">
+  <label class="radio" id="a-button">
+    <input name="im-buttons2" type="radio" id="a-button2" checked="checked"/><span>yes</span>
+  </label>
+  <label class="radio" id="b-button">
+    <input name="im-buttons2" type="radio" id="b-button2"/><span>no</span>
+  </label></span></td>
+    </tr>
+    <tr>
+      <td scope="row" >Chemicals</td>
+      <td><span class="im-buttons">
+  <label class="radio" id="a-button">
+    <input name="im-buttons3" type="radio" id="a-button3" checked="checked"/><span>yes</span>
+  </label>
+  <label class="radio" id="b-button">
+    <input name="im-buttons3" type="radio" id="b-button3"/><span>no</span>
+  </label></span></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+      
+          </div>
+          <div class="form-group mb-3">
+            <label for="care">Care</label>&nbsp; &nbsp; &nbsp;
+            
+
+
+            <select name="care" id="care" required> 
+            <option disabled selected value>-- select an option --</option>
+            <option value="vlow">Very Low</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            <option value="vhigh">Very High</option>
+            </select>
+
+
+
+
+
+          </div>
+          <br>
+          <button type="button" id="generateButton" class="btn btn-block btn-primary btn-lg">Generate QR Code</button>
+          <br>
+        </div>
+      </div>
+    <br><br>
+      <h2>Step 2 - Click on "Download QR Image"</h1>
+        
+        <div id="A4Page" class="A4Page">
+          <img class="upiLogo" src="./upi-icon-black.png" alt="">
+          <div class="qrBoxOuter">
+            <div id="box1"></div>
+          </div>
+          <img style="width:85%;margin-top: 4mm;" src="./apps.png" alt="">
+          <button type="button" id="DownloadQrImage" class="shouldBeHiddenOnPrint btn btn-primary btn-lg">Download QR Image</button>
+        </div>
+
+      </div>
+    </div>
+    <div class="freespace">
+
+    </div>
+       
+        <script src="main1.js"></script>
+  </body>
+
+
+</html>

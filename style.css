@@ -1,295 +1,168 @@
-/* html {
-	height: 100%;
-	width: 1000px;
-	background-color: hsla(200,40%,30%,.4);
-	background-image:		
-		url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
-		url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
-		url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
-		url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
-		url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
-	background-repeat: repeat-x;
-	background-position: 
-		0 20%,
-		0 100%,
-		0 50%,
-		0 100%,
-		0 0;
-	background-size: 
-		2500px,
-		800px,
-		500px 200px,
-		1000px,
-		400px 260px;
-	animation: 50s para infinite linear;
-	}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-@keyframes para {
-	100% {
-		background-position: 
-			-5000px 20%,
-			-800px 95%,
-			500px 50%,
-			1000px 100%,
-			400px 0;
-		}
-	} */
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
 
-  html {
-    /* height:100%; */
-    /* overflow: scroll; */
-  }
-  
-  body {
-    margin:0;
-     width: 100%;
-  }
-  
-  .bg {
-    animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
-    bottom:0;
-    left:-50%;
-    opacity:.5;
-    position:fixed;
-    right:-50%;
-    top:0;
-    z-index:-1;
-  }
-  
-  .bg2 {
-    animation-direction:alternate-reverse;
-    animation-duration:4s;
-  }
-  
-  .bg3 {
-    animation-duration:5s;
-  }
-  
-  .content {
-    background-color:rgba(255,255,255,.8);
-    border-radius:.25em;
-    box-shadow:0 0 .25em rgba(0,0,0,.25);
-    box-sizing:border-box;
-    left:50%;
-    padding:10vmin;
-    position:absolute;
-    text-align:center;
-    top:60%;
-    transform:translate(-500px, -400px);
-  }
-
-
-  @media only screen and (max-width: 768px){
-
-    .content {
-      background-color:rgba(255,255,255,.8);
-      border-radius:.25em;
-      box-shadow:0 0 .25em rgba(0,0,0,.25);
-      box-sizing:border-box;
-      left:50%;
-      padding:10vmin;
-      position:absolute;
-      text-align:center;
-      transform:translate(-200px, -250px);
-    }
-
-
-  }
-  
-  h1 {
-    font-family:monospace;
-  }
-  
-  @keyframes slide {
-    0% {
-      transform:translateX(-25%);
-    }
-    100% {
-      transform:translateX(25%);
-    }
-  }
-
-body {
-  
-}
-.topBar {
-  background: #352b2b;
-  color: #d6d5a3;
-  padding: 20px;
-  text-align: center;
-}
-
-.smallinput {
-  max-width: 270px;
-  margin-left: 30px;
-}
-
-.mainContent {
-  padding: 5%;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-.A4Page {
-  display: flex;
-  width: 210mm;
-  background-color: white;
-  height: 200mm;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-li {
-  display: block;
-}
-
-li:before {
-  content: "🌑";
-  font-family: "Glyphicons Halflings";
-  font-size: 9px;
-  float: left;
-  margin-top: 7px;
-  margin-left: -3px;
-  margin-right: 11px;
-}
-
-.qrBoxOuter {
-  padding: 4mm;
-  background: white;
-  border: 1px solid black;
-  margin-top: 2mm;
-  margin-bottom: 2mm;
-}
-
-#box1 {
-  width: 76mm;
-  height: 76mm;
-}
-.upiLogo {
-  width: 56%;
-}
-#box1 img {
-  width: 100%;
-}
-
-/* .hrline {
-  width: 90%;
-  background-color: #433b52;
-  height: 1mm;
-} */
-
-/* 
-.freespace{
-  height: 90%;
-} */
-
-
-svg{
-  margin: -220px auto;
-}
-
-.container {
-  display: block;
-  /* width: 100%; */
-  /* max-width: 600px; */
-}
-
-
-.rangeSlider {
-  position: relative;
-  /* height: 6px; */
-  margin: 40px;
-  /* margin-top: 45px;
-  margin-bottom: 12px; */
-  border-radius: 500px;
-  background-color: #ddd;
-}
-.rangeSlider--animate .rangeSlider__handle,
-.rangeSlider--animate .rangeSlider__tooltip {
-  transition: left 300ms;
-}
-.rangeSlider--animate .rangeSlider__range {
-  transition: left 300ms, width 300ms;
-}
-.rangeSlider__handle {
-  display: inline-block;
-  position: absolute;
-  top: -12px;
-  width: 30px;
-  height: 30px;
+*
+{
+  margin: 0;
   padding: 0;
-  border: none;
-  border-radius: 100%;
-  background-color: #999;
+  box-sizing: border-box;
+
 }
-.rangeSlider__handle:before {
-  content: "";
-  display: block;
+
+body
+{
+  overflow-x: hidden;
+  background: #fff;
+  min-height: 100vh;
+}
+#header
+{
   position: absolute;
-  top: -10px;
-  left: calc(50% - 8px);
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid #333;
-}
-.rangeSlider__handle:after {
-  content: attr(data-value);
-  display: block;
-  position: absolute;
-  top: -33px;
-  left: -25px;
-  width: 80px;
-  height: 25px;
-  line-height: 25px;
-  color: #fff;
-  font-size: 12px;
-  text-align: center;
-  transition: margin 300ms;
-}
-.rangeSlider__handle:focus {
-  outline: 0;
-}
-.rangeSlider__handle--from {
-  left: -15px;
-}
-.rangeSlider__handle--to {
-  right: -15px;
-}
-.rangeSlider__handle--active {
-  z-index: 1;
-}
-.rangeSlider__range {
-  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 6px;
-  background-color: #428bca;
-  border-radius: 500px;
-}
-.rangeSlider__tooltips {
-  position: absolute;
-  top: -45px;
-  width: 100%;
-  height: 25px;
-  filter: url("#composite-goo");
-}
-.rangeSlider__tooltip {
-  position: absolute;
-  width: 80px;
-  height: 25px;
-  background-color: #333;
-}
-.rangeSlider__tooltip--from {
-  left: -40px;
-}
-.rangeSlider__tooltip--to {
-  right: -40px;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
 }
 
+#header .logo
+{
+  color: #094b65;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+#header ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header ul li
+{
+  list-style: none;
+  margin-left: 20px;
+}
+
+#header ul li a
+{
+  text-decoration: 0;
+  padding: 6px 15px;
+  color: #094b65;
+  border-radius: 20px;
+}
+
+#header ul li a.active,
+#header ul li a:hover
+{
+  background: #094b65;
+  color: #fff;
+}
+
+section
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* goal of this is to insert transparent transition */
+/* there is no content, so content property is empty */
+
+section::before
+{
+  content:'';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  /* 100px high is a gradient transition */
+  height: 100px;
+  background: linear-gradient(to top, #094b65, transparent);
+  z-index: 2;
+}
+
+section img
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: -1;
+}
+
+section #text
+{
+  position: absolute;
+  color: #094b65;
+  font-size: 10vw;
+  text-align: center;
+  line-height: 0.55em;
+  font-family: 'Rancho', cursive;
+  transform: translateY(-50%);
+}
+
+section #text span
+{
+  font-size: 0.20em;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+#btn
+{
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  background: #fff;
+  color: #094b65;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  transform: translateY(100px);
+}
+
+#btn:hover
+{
+  background: #ffcf4d;
+  border: 1px solid rgba(255, 0, 88, 0.4);
+  box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+}
+
+.sec
+{
+  position: relative;
+  padding: 100px;
+  background: #094b65;
+}
+
+.sec h2
+{
+  font-size: 3.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.sec p
+{
+  font-size: 1em;
+  color: #fff;
+}
+  
 
 
 * {
